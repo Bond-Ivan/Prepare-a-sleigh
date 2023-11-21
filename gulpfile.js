@@ -111,18 +111,6 @@ const otherFiles = () => {
 		.pipe(dest('dist'))
 }
 
-const libsFiles = () => {
-	return src('src/phpmailer**/**/*')
-		.pipe(dest('dist'))
-}
-
-const phpFiles = () => {
-	return src('src/php**/*.php')
-		.pipe(concat('sendmail.php'))
-		.pipe(dest('dist'))
-		.pipe(browserSync.stream())
-}
-
 watch('src/**/*.html', htmlMinifyDev);
 watch('src/images/svg/**/*.svg', svgSprites);
 watch(['src/images/**/*.jpg',
@@ -131,11 +119,10 @@ watch(['src/images/**/*.jpg',
 	'src/images/**/*.jpeg'], imagesPrep);
 watch('src/js/**/*.js', scriptsDev);
 watch('src/styles/components/**/*.scss', scssCompileDev);
-watch('src/php/**/*.php', phpFiles);
 
-const dev = series(clean, htmlMinifyDev, scssCompileDev, scriptsDev, svgSprites, imagesPrep, otherFiles, libsFiles, phpFiles, watchFiles);
+const dev = series(clean, htmlMinifyDev, scssCompileDev, scriptsDev, svgSprites, imagesPrep, otherFiles, watchFiles);
 exports.dev = dev;
 
-const build = series(clean, htmlMinifyBuild, scssCompileBuild, scriptsBuild, svgSprites, imagesPrep, otherFiles, libsFiles, phpFiles);
+const build = series(clean, htmlMinifyBuild, scssCompileBuild, scriptsBuild, svgSprites, imagesPrep, otherFiles,);
 exports.build = build;
 

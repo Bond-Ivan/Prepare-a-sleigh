@@ -28,28 +28,26 @@ registrationForm.addEventListener('submit', (event) => {
 		return !elem.classList.contains("registration__form-input--active");
 	})
 
-	if (!arrayInputBooll) {
-
-	} else {
+	if (arrayInputBooll) {
 		sendFormData();
 	}
 });
 
 async function sendFormData() {
 	toggleLoaderClass()
-	let response = await fetch('sendmail.php', {
-		method: 'POST',
-		body: new FormData(registrationForm)
-	});
 
-	if (response.ok) {
-		toggleLoaderClass();
-		registrationForm.reset();
-		alert("Отлично, письмо отправлено");
-	} else {
-		toggleLoaderClass();
-		alert("Ошибка, запрос не фурычит, приезжай и всё обусдим");
-	}
+	let random_boolean = Math.random() < 0.9;
+
+	setTimeout(() => {
+		if (random_boolean === true) {
+			toggleLoaderClass();
+			registrationForm.reset();
+			alert("Отлично, письмо отправлено");
+		} else {
+			toggleLoaderClass();
+			alert("Ошибка, запрос не фурычит, приезжай и всё обусдим");
+		}
+	}, 2000)
 }
 
 function checkValue() {
