@@ -1,0 +1,342 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.registration {
+	background-image: url('images/background__registration.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	z-index: 11;
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: opacity 0.3s ease-in-out;
+
+	&--active {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	&__container {
+		max-width: 1920px;
+		padding: 100px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	&__header {
+		margin-bottom: 73px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__title {
+		color: $colorWhite;
+		font-size: 58px;
+		font-weight: 700;
+		line-height: 67px;
+		letter-spacing: 0em;
+		text-align: center;
+	}
+
+	&__text {
+		color: $colorWhite;
+		font-size: 30px;
+		font-weight: 300;
+		line-height: 50px;
+		letter-spacing: 0em;
+		text-align: center;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			.disclaimer__img-close {
+				stroke: #cf6037;
+			}
+
+			.disclaimer__span {
+				color: #cf6037;
+			}
+		}
+
+		&:focus:not(:hover) {
+			.disclaimer__img-close {
+				stroke: #783821;
+			}
+
+			.disclaimer__span {
+				color: #783821;
+			}
+		}
+
+		&:active {
+			.disclaimer__img-close {
+				stroke: #8f3616;
+			}
+
+			.disclaimer__span {
+				color: #8f3616;
+			}
+		}
+
+		&-application {
+			@include registrationBtn;
+		}
+
+		&-telegram {
+			@include registrationLink;
+		}
+	}
+
+	&__description--active {
+		display: none;
+	}
+
+	&__form {
+		margin: 0 auto;
+		max-width: 756px;
+
+
+		&--active {
+			opacity: 0.1;
+		}
+
+		&-elem {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 60px;
+
+			&:nth-last-child(1) {
+				margin-bottom: 107px;
+			}
+		}
+
+		&-label {
+			margin-bottom: 30px;
+			color: $colorOrange;
+			font-size: 25px;
+			font-weight: 400;
+			line-height: 29px;
+			letter-spacing: 0em;
+			text-align: left;
+
+			&--active {
+				color: red;
+			}
+		}
+
+		&-input {
+			color: $colorWhite;
+			width: 100%;
+			height: 30px;
+			border: none;
+			border-radius: 0;
+			border-bottom: 1px solid #FFFFFF;
+			font-size: 30px;
+			line-height: 30px;
+
+			&--active {
+				border-color: red;
+			}
+		}
+
+		&-textarea {
+			color: $colorWhite;
+			border-radius: 0;
+			resize: none;
+			outline: none;
+			overflow: hidden;
+			height: 30px;
+			font-size: 30px;
+			line-height: 30px;
+		}
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: space-between
+	}
+}
+
+@media (max-width: 1440px) {
+	.registration {
+
+		&__container {
+			max-width: 1440px;
+			padding: 75px;
+		}
+
+		&__title {
+			font-size: 45px;
+			line-height: 52px;
+		}
+
+		&__text {
+			font-size: 18px;
+			line-height: 26px;
+		}
+
+		&__form {
+
+			&-elem {
+				margin-bottom: 45px;
+
+				&:nth-last-child(1) {
+					margin-bottom: 80px;
+				}
+			}
+
+			&-label {
+				margin-bottom: 20px;
+				font-size: 18px;
+				line-height: 21px;
+			}
+		}
+
+		&__btn {
+			&-application {
+				@include registrationBtn-1440;
+			}
+
+			&-telegram {
+				@include registrationLink-1440;
+			}
+		}
+	}
+}
+
+@media (max-width: 920px) {
+	.registration {
+		&__container {
+			max-width: 1440px;
+			padding: 50px;
+		}
+
+		&__title {
+			font-size: 20px;
+			line-height: 23px;
+		}
+
+		&__text {
+			font-size: 11px;
+			line-height: 15px;
+		}
+
+		&__form {
+			&-body {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+			}
+
+			&-elem {
+				width: 45%;
+				margin-bottom: 35px;
+
+				&:nth-last-child(1) {
+					margin-bottom: 35px;
+				}
+
+				&:not(:nth-child(2n)) {
+					margin-right: auto;
+				}
+			}
+
+			&-label {
+				margin-bottom: 0;
+				font-size: 12px;
+				line-height: 14px;
+			}
+
+			&-input {
+				font-size: 15px;
+			}
+		}
+
+		&__btns {
+			width: 75%;
+			margin: 0 auto;
+		}
+
+		&__btn {
+			&-application {
+				width: 45%;
+				@include registrationBtn-920;
+			}
+
+			&-telegram {
+				width: 45%;
+				@include registrationLink-920;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.registration {
+
+		&__header {
+			margin-bottom: 25px;
+		}
+
+		&__title {
+			font-size: 18px;
+		}
+
+		&__description {
+			display: none;
+
+			&--active {
+				display: block;
+				margin-bottom: 30px;
+			}
+		}
+
+		&__form {
+
+			&-elem {
+				margin-bottom: 25px;
+			}
+
+			&-label {
+				margin-bottom: 0;
+			}
+
+			&-input {
+				font-size: 12px;
+			}
+		}
+
+		&__btn {
+			&-application {
+				font-size: 10px;
+			}
+
+			&-telegram {
+				font-size: 10px;
+				line-height: 10px;
+			}
+		}
+
+		&__btns {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.registration {
+		&__form-label {
+			font-size: 8px;
+			line-height: 12px;
+		}
+	}
+}

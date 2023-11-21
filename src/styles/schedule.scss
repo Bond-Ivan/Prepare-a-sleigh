@@ -1,0 +1,372 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.schedule {
+
+	background-image: url('images/background__block3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__container {
+		position: relative;
+	}
+
+	&__img {
+		margin-bottom: 3.5%;
+	}
+
+	&__title {
+		@include secondTitle;
+	}
+
+	&__text {
+		word-wrap: break-word;
+		margin-bottom: 12.7%;
+		color: $colorWhite;
+		font-size: 22px;
+		font-weight: 400;
+		line-height: 25px;
+		letter-spacing: 0em;
+	}
+
+	&__swiper {
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+
+		&-container {
+			position: relative;
+		}
+
+		&-item {
+			width: 31% !important;
+		}
+
+		&-scrollbar {
+			background-color: $colorWhite !important;
+			bottom: -20px !important;
+			height: 2px !important;
+		}
+	}
+
+	&__box {
+		height: 80px;
+		margin-top: auto;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+
+		&-item {
+			display: flex;
+			align-items: center;
+			color: $colorCrimson;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 17px;
+			letter-spacing: 0em;
+		}
+
+		&-img {
+			margin-right: 10px;
+		}
+	}
+
+	&__item {
+		min-height: 411px;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		&-header {
+			display: grid;
+			word-wrap: break-word;
+			margin-bottom: 41px;
+			text-align: center;
+			border: 0.86px solid $colorWhite;
+			color: $colorWhite;
+			background-color: rgb(50, 39, 41, .65);
+			padding: 9.51px 25.07px;
+			border-radius: 8.64px;
+			font-size: 22px;
+			font-weight: 400;
+			line-height: 25px;
+			letter-spacing: 0em;
+		}
+
+		&-time {
+			font-size: 26px;
+			font-weight: 700;
+			line-height: 30px;
+		}
+
+		&-text {
+			margin-bottom: 10px;
+			word-wrap: break-word;
+			color: $colorWhite;
+			font-size: 17px;
+			font-weight: 300;
+			line-height: 20px;
+			letter-spacing: 0em;
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.schedule {
+		&__title {
+			font-size: 45px;
+			line-height: 52px;
+		}
+
+		&__text {
+			font-size: 18px;
+			line-height: 21px;
+		}
+
+		&__item {
+			min-height: 319px;
+
+			&-header {
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 19px;
+				border-width: 0.65px;
+				border-radius: 6.48px;
+				padding: 7.13px 18.8px;
+			}
+
+			&-time {
+				font-size: 20px;
+				line-height: 23px;
+			}
+
+			&-text {
+				margin-bottom: 8px;
+				font-size: 13px;
+				line-height: 15px;
+			}
+		}
+
+		&__box {
+
+			height: 60px;
+
+			&-item {
+				font-size: 12px;
+				line-height: 14px;
+			}
+
+			&-img {
+				&--fireplace {
+					width: 13.5px;
+					height: 11px;
+				}
+
+				&--christmas-tree {
+					width: 13.5px;
+					height: 17px;
+				}
+
+				&--party {
+					width: 15px;
+					height: 15px;
+				}
+
+				&--tableware {
+					width: 12px;
+					height: 17px;
+				}
+
+				&--pills {
+					width: 14px;
+					height: 14px;
+				}
+
+				&--borjomi {
+					width: 5px;
+					height: 15px;
+				}
+
+				&--ski {
+					width: 15px;
+					height: 14px;
+				}
+
+				&--schedule__fair {
+					width: 15px;
+					height: 15px;
+				}
+
+				&--location {
+					width: 16px;
+					height: 15px;
+				}
+
+				&--schedule__castle {
+					width: 11px;
+					height: 15px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.schedule {
+		&__list {
+			width: 98%;
+		}
+
+		&__item {
+			&-title {
+				padding: 5.13px 15.8px;
+				font-size: 14px;
+			}
+
+			&-time {
+				font-size: 18px;
+			}
+		}
+
+		&__box-item {
+			font-size: 10px;
+		}
+	}
+}
+
+@media (max-width: 920px) {
+	.schedule {
+
+		&__title {
+			font-size: 20px;
+			line-height: 23px;
+		}
+
+		&__text {
+
+			font-size: 10px;
+			line-height: 11px;
+		}
+
+		&__item {
+			min-height: 207px;
+
+			&-header {
+				margin-bottom: 30px;
+				font-size: 10px;
+				line-height: 11px;
+				padding: 4.17px 11px;
+				border-radius: 3.79px;
+				border-width: 0.38px;
+			}
+
+			&-time {
+				font-size: 12px;
+				line-height: 14px;
+			}
+
+			&-text {
+				font-size: 8px;
+				line-height: 9px;
+			}
+		}
+
+		&__box {
+			height: 40px;
+
+			&-item {
+				font-size: 7px;
+				line-height: 8px;
+			}
+
+			&-img {
+				&--fireplace {
+					width: 8.5px;
+					height: 7px;
+				}
+
+				&--christmas-tree {
+					width: 8.5px;
+					height: 11px;
+				}
+
+				&--party {
+					width: 10px;
+					height: 10px;
+				}
+
+				&--tableware {
+					width: 8px;
+					height: 11px;
+				}
+
+				&--pills {
+					width: 9px;
+					height: 9px;
+				}
+
+				&--borjomi {
+					width: 3px;
+					height: 10px;
+				}
+
+				&--ski {
+					width: 10px;
+					height: 9px;
+				}
+
+				&--fair {
+					width: 9.5px;
+					height: 9.5px;
+				}
+
+				&--location {
+					width: 10px;
+					height: 10px;
+				}
+
+				&--castle {
+					width: 7px;
+					height: 9.5px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.schedule {
+		&__item {
+			min-height: 195px;
+
+			&-header {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__title {
+			font-size: 18px;
+		}
+
+		&__img {
+			margin-bottom: 6.5%;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+
+	.schedule {
+		&__swiper-item {
+			width: 40% !important;
+		}
+
+		&__item {
+			min-height: 210px;
+
+			&-header {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

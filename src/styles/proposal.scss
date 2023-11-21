@@ -1,0 +1,234 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.proposal {
+
+	position: relative;
+	background-image: url('images/background__block4.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+
+	&__wrapper {
+		background-image: url('images/background__block4-rainbow.png');
+		background-repeat: no-repeat;
+		background-position: top right;
+		background-size: cover;
+	}
+
+	&__container {
+		position: relative;
+	}
+
+	&__blocks {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__block {
+		width: 100%;
+	}
+
+	&__img {
+		margin-bottom: 8.5%;
+	}
+
+	&__title {
+		margin-bottom: 7%;
+		@include secondTitle;
+	}
+
+	&__box {
+		width: 55%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 8.0%;
+	}
+
+	&__btn {
+		@include registrationBtn;
+	}
+
+	&__link {
+		@include registrationLink;
+	}
+
+	&__text {
+		width: 55%;
+		@include text;
+
+		&:not(:last-child) {
+			margin-bottom: 34px;
+		}
+
+		&:last-child {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: flex-end;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+
+		margin-bottom: 10px;
+		display: flex;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-right: 75px;
+		}
+
+		&-img {
+			margin-right: 15px;
+		}
+
+		&-span {
+			color: $colorOrange;
+			font-size: 19px;
+			font-weight: 400;
+			line-height: 22px;
+			letter-spacing: 0em;
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.proposal {
+		&__title {
+			margin-bottom: 5%;
+			font-size: 45px;
+			line-height: 52px;
+		}
+
+		&__box {
+			width: 75%;
+			margin-bottom: 6%;
+		}
+
+		&__btn {
+			@include registrationBtn-1440;
+		}
+
+		&__link {
+			@include registrationLink-1440;
+		}
+
+		&__text {
+			font-size: 18px;
+			line-height: 26px;
+
+			&:not(:last-child) {
+				margin-bottom: 28px;
+			}
+		}
+
+		&__item {
+			&-span {
+				font-size: 14px;
+				line-height: 16px;
+			}
+
+			&-img {
+				&--warning {
+					width: 21px;
+					height: 19px;
+				}
+
+				&--poo {
+					width: 22.5px;
+					height: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 920px) {
+	.proposal {
+
+		&__img {
+			margin-right: 20px;
+		}
+
+		&__title {
+			margin-right: 20px;
+			font-size: 20px;
+			line-height: 23px;
+		}
+
+		&__btn {
+			@include registrationBtn-920;
+		}
+
+		&__link {
+			@include registrationLink-920;
+		}
+
+		&__text {
+			font-size: 10px;
+			line-height: 15px;
+		}
+
+		&__item {
+			&-span {
+				font-size: 9px;
+				line-height: 10px;
+			}
+
+			&-img {
+				&--warning {
+					width: 14px;
+					height: 12.5px;
+				}
+
+				&--poo {
+					width: 15px;
+					height: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.proposal {
+		&__box {
+			width: 100%;
+		}
+
+		&__text {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__btn {
+			font-size: 10px;
+		}
+
+		&__link {
+			font-size: 10px;
+			line-height: 15px;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.proposal {
+		&__btn {
+			font-size: 8px;
+		}
+
+		&__link {
+			font-size: 7px;
+		}
+	}
+}

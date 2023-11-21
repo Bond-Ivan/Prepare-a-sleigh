@@ -1,0 +1,151 @@
+@import "_variables.scss";
+
+
+.header {
+
+    background-image: url('images/background__block1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__wrapper {
+        background-image: url('images/background__block1-palm1.png');
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+    }
+
+    &__inner {
+        background-image: url('images/background__block1-palm2.png');
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    &__position {
+        position: relative;
+    }
+
+    &__logo {
+        margin-bottom: 16.6%;
+    }
+
+    &__title {
+        word-wrap: break-word;
+        width: 50%;
+        margin-bottom: 33px;
+        color: $colorWhite;
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 75px;
+        letter-spacing: 0em;
+    }
+
+    &__text {
+        word-wrap: break-word;
+        margin-bottom: 128px;
+        color: $colorWhite;
+        font-size: 39px;
+        font-weight: 300;
+        line-height: 45px;
+        letter-spacing: 0em;
+    }
+
+    &__btn {
+        border: 1px solid $colorWhite;
+        padding: 11px 29px;
+        border-radius: 10px;
+        color: $colorWhite;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #925038;
+        }
+
+        &:focus:not(:hover) {
+            background-color: #562817;
+        }
+
+        &:active {
+            background-color: #8f3616;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+
+    .header {
+
+        &__wrapper {
+            background-size: contain;
+        }
+
+        &__inner {
+            background-size: contain;
+        }
+
+        &__title {
+            font-size: 55px;
+            line-height: 56px;
+        }
+
+        &__text {
+            font-size: 30px;
+            line-height: 34px;
+        }
+
+        &__btn {
+            font-size: 19px;
+            line-height: 22px;
+            padding: 8.25px 21.75px;
+            border-radius: 7.5px;
+            border-width: 0.75px;
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    .header {
+
+        &__logo {
+            margin-bottom: 11.6%;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+            font-size: 32px;
+            line-height: 33px;
+        }
+
+        &__text {
+            margin-bottom: 100px;
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        &__btn {
+            font-size: 11px;
+            line-height: 13px;
+            padding: 4.84px 12.75px;
+            border-radius: 4.4px;
+            border-width: 0.44px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        &__title {
+            width: 100%;
+            font-size: 28px;
+            line-height: 30px;
+        }
+
+        &__text {
+            font-size: 15px;
+            line-height: 15px;
+        }
+    }
+}

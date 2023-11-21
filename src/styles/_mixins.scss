@@ -1,0 +1,107 @@
+@mixin secondTitle {
+    word-wrap: break-word;
+    color: $colorWhite;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 67px;
+    letter-spacing: 0em;
+}
+
+@mixin text {
+    word-wrap: break-word;
+    text-align: justify;
+    color: $colorWhite;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 35px;
+    letter-spacing: 0em;
+}
+
+@mixin registrationBtn {
+    word-wrap: break-word;
+    width: 44%;
+    margin-right: 30px;
+    text-align: center;
+    background: linear-gradient(0deg, rgba(254, 156, 44, 0.04), rgba(254, 156, 44, 0.04));
+    color: $colorOrange;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    padding: 9.51px 25.07px;
+    border-radius: 8.64px;
+    border: 0.86px solid $colorOrange;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: #925038;
+    }
+
+    &:focus:not(:hover) {
+        background-color: #562817;
+    }
+
+    &:active {
+        background-color: #8f3616;
+    }
+}
+
+@mixin registrationLink {
+    width: 50%;
+    background: linear-gradient(0deg, rgba(254, 156, 44, 0.04), rgba(254, 156, 44, 0.04));
+    color: $colorOrange;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    padding: 9.51px 25.07px;
+    border-radius: 8.64px;
+    border: 0.86px solid $colorOrange;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: #925038;
+    }
+
+    &:focus:not(:hover) {
+        outline: none;
+        background-color: #562817;
+    }
+
+    &:active {
+        background-color: #8f3616;
+    }
+}
+
+@mixin registrationBtn-1440 {
+    font-size: 19px;
+    line-height: 22px;
+    padding: 7.13px 18.8px;
+    border-radius: 6.48px;
+    border-width: 0.65px;
+}
+
+@mixin registrationLink-1440 {
+    padding: 7.13px 18.8px;
+    border-radius: 6.48px;
+    border-width: 0.65px;
+    font-size: 19px;
+    line-height: 22px;
+}
+
+@mixin registrationBtn-920 {
+    padding: 4.83px 12.73px;
+    border-radius: 4.39px;
+    border-width: 0.44px;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+@mixin registrationLink-920 {
+    padding: 4.83px 12.73px;
+    border-radius: 4.39px;
+    border-width: 0.44px;
+    font-size: 13px;
+    line-height: 15px;
+}
+

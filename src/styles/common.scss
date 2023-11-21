@@ -1,0 +1,274 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ul,
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+	font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+
+input {
+	&::-ms-clear {
+		display: none;
+	}
+}
+
+button,
+input[type="submit"] {
+	display: inline-block;
+	box-shadow: none;
+	background-color: transparent;
+	background: none;
+	cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+	outline: none;
+}
+
+button {
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+.element::-webkit-scrollbar {
+	width: 0;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+body {
+	font-family: 'TT Commons', sans-serif;
+	background-color: black;
+}
+
+.container {
+	max-width: 1920px;
+	padding: 100px;
+	padding-right: 260px;
+	margin: 0 auto;
+}
+
+@font-face {
+	font-family: 'TT Commons';
+	src: local('TT Commons Light'), local('TT Commons-Light'),
+		url('../fonts/TTCommons-Light.woff2') format('woff2'),
+		url('../fonts/TTCommons-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TT Commons';
+	src: local('TT Commons Regular'), local('TT Commons-Regular'),
+		url('../fonts/TTCommons-Regular.woff2') format('woff2'),
+		url('../fonts/TTCommons-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TT Commons';
+	src: local('TT Commons Medium'), local('TT Commons-Medium'),
+		url('../fonts/TTCommons-Medium.woff2') format('woff2'),
+		url('../fonts/TTCommons-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TT Commons';
+	src: local('TT Commons Bold'), local('TT Commons-Bold'),
+		url('../fonts/TTCommons-Bold.woff2') format('woff2'),
+		url('../fonts/TTCommons-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+.logo__second {
+	width: 167px;
+	height: 103px;
+}
+
+.loader {
+	display: none;
+	position: sticky;
+	z-index: 50;
+	top: 40%;
+	left: 47%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	width: 8px;
+	height: 48px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	animation: animloader 1s linear infinite alternate;
+
+	&--active {
+		display: block;
+	}
+
+	&__background {
+		display: none;
+		position: absolute;
+		z-index: 12;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #434343cf;
+
+		&--active {
+			display: block;
+		}
+	}
+}
+
+@keyframes animloader {
+	0% {
+		box-shadow: 20px 0 rgba(255, 255, 255, 0), 40px 0 rgba(255, 255, 255, 0), 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+	}
+
+	20% {
+		box-shadow: 20px 0 white, 40px 0 rgba(255, 255, 255, 0), 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+	}
+
+	40% {
+		box-shadow: 20px 0 white, 40px 0 white, 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+	}
+
+	60% {
+		box-shadow: 20px 0 white, 40px 0 white, 60px 0 white, 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
+	}
+
+	80% {
+		box-shadow: 20px 0 white, 40px 0 white, 60px 0 white, 80px 0 white, 100px 0 rgba(255, 255, 255, 0);
+	}
+
+	100% {
+		box-shadow: 20px 0 white, 40px 0 white, 60px 0 white, 80px 0 white, 100px 0 white;
+	}
+}
+
+
+@media (max-width: 1440px) {
+	.container {
+		max-width: 1440px;
+		padding: 75px;
+		padding-right: 195px;
+	}
+
+	.loader {
+		left: 46%;
+	}
+}
+
+@media (max-width: 920px) {
+	.container {
+		max-width: 920px;
+		padding: 50px;
+		padding-right: 100px;
+	}
+
+	.loader {
+		left: 43%;
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+		max-width: 576px;
+		padding: 40px;
+		padding-right: 80px;
+	}
+}
+
+@media (max-width: 400px) {
+	.container {
+		padding: 30px;
+		padding-right: 65px;
+	}
+}

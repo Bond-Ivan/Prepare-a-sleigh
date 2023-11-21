@@ -1,0 +1,137 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+.conclusion {
+
+    background-image: url('images/background__block5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__wrapper {
+        background-image: url('images/background__block5-mandarin1.png');
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    &__wrapper2 {
+        background-image: url('images/background__block5-mandarin2.png');
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+
+    &__inner {
+        background-image: url('images/background__block5-mandarin3.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    &__inner2 {
+        background-image: url('images/background__block5-mandarin4.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__box {
+        width: 100%;
+    }
+
+    &__img {
+        margin-bottom: 90px;
+    }
+
+    &__title {
+        margin-bottom: 95px;
+        @include secondTitle;
+    }
+
+    &__text {
+        width: 55%;
+        @include text;
+
+        &:not(:last-child) {
+            margin-bottom: 34px;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .conclusion {
+
+        &__img {
+            margin-bottom: 75px;
+        }
+
+        &__title {
+            margin-bottom: 7%;
+            font-size: 45px;
+            line-height: 52px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 26px;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 920px) {
+
+    .conclusion {
+
+        &__wrapper {
+            background-size: 20%;
+        }
+
+        &__wrapper2 {
+            background-size: 25%;
+        }
+
+        &__inner {
+            background-size: 35%;
+        }
+
+        &__inner2 {
+            background-size: 20%;
+        }
+
+        &__img {
+            margin-bottom: 8%;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 23px;
+        }
+
+        &__text {
+            font-size: 10px;
+            line-height: 15px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .conclusion {
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__text {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,286 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.description {
+
+	background-image: url('images/background__block2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__wrapper {
+		background-image: url('images/background__block2-champagne1.png');
+		background-repeat: no-repeat;
+		background-position: top right;
+	}
+
+	&__inner {
+		background-image: url('images/background__block2-champagne2.png');
+		background-repeat: no-repeat;
+		background-position: bottom;
+	}
+
+	&__position {
+		position: relative;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__block {
+		width: 100%;
+		margin-right: 10%;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 60px;
+	}
+
+	&__img {
+		margin-right: 60px;
+	}
+
+	&__btn {
+		background-color: #1F110E;
+		padding: 9.51px 25.07px;
+		border-radius: 8.64px;
+		border: 0.86px solid $colorWine;
+		color: $colorWine;
+		font-size: 25px;
+		font-weight: 400;
+		line-height: 29px;
+		letter-spacing: 0em;
+		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+		&:hover {
+			background-color: #622b17;
+			color: $colorWhite;
+		}
+
+		&:focus:not(:hover) {
+			background-color: #562817;
+			color: $colorWhite;
+		}
+
+		&:active {
+			background-color: #8f3616;
+			color: $colorWhite;
+		}
+	}
+
+	&__title {
+		margin-bottom: 57px;
+		@include secondTitle;
+
+		&--mobile {
+			display: none
+		}
+	}
+
+	&__text {
+		@include text;
+		width: 55%;
+
+		&:not(:last-child) {
+			margin-bottom: 34px;
+		}
+
+		&:last-child {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-right: 10%;
+		}
+
+		&-img {
+			margin-right: 20px;
+		}
+
+		&-span {
+			color: $colorWine;
+			text-wrap: nowrap;
+			font-size: 19px;
+			font-weight: 400;
+			line-height: 22px;
+			letter-spacing: 0em;
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.description {
+
+		&__wrapper {
+			background-size: contain;
+		}
+
+		&__inner {
+			background-size: contain;
+		}
+
+		&__btn {
+			font-size: 19px;
+			line-height: 22px;
+			padding: 7.13px 18.8px;
+			border-radius: 6.48px;
+			border-width: 0.65px;
+		}
+
+		&__title {
+			margin-bottom: 50px;
+			font-size: 43px;
+			line-height: 49px;
+		}
+
+		&__text {
+			font-size: 18px;
+			line-height: 26px;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__item {
+			&-span {
+				font-size: 14px;
+				line-height: 16px;
+			}
+
+			&-img {
+				&--wine {
+					width: 12px;
+					height: 30px;
+				}
+
+				&--food {
+					width: 24px;
+					height: 30px;
+				}
+
+				&--entertainments {
+					width: 33px;
+					height: 30px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+
+	.descriptionc {
+		&__text {
+			width: 60%;
+		}
+	}
+}
+
+@media (max-width: 920px) {
+	.description {
+		&__btn {
+			display: none;
+		}
+
+		&__title {
+			display: none;
+
+			&--mobile {
+				display: block;
+				@include secondTitle;
+				font-size: 20px;
+				line-height: 23px;
+			}
+		}
+
+		&__box {
+			margin-bottom: 70px;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		&__text {
+			font-size: 10px;
+			line-height: 15px;
+
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+
+		&__item {
+			margin-bottom: 10px;
+
+			&-img {
+				&--wine {
+					width: 7.5px;
+					height: 19px;
+				}
+
+				&--food {
+					width: 15px;
+					height: 19px;
+				}
+
+				&--entertainments {
+					width: 21px;
+					height: 19px;
+				}
+			}
+
+			&-span {
+				font-size: 9px;
+				line-height: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.description {
+
+		&__title {
+			font-size: 18px;
+		}
+
+		&__img {
+			margin-bottom: 6.5%;
+		}
+
+		&__box {
+			margin-bottom: 40px;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__text {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			&:last-child {
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
