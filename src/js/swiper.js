@@ -17,16 +17,23 @@ const swiper = new Swiper('.swiper', {
 	allowTouchMove: false,
 	simulateTouch: false,
 	centeredSlides: true,
-	speed: 700,  // Adjust this value to influence swipe speed
+	speed: 700,
+	containerAutoHeight: true,
 	navigation: {
-		nextEl: '.swiper-button-next',
+		nextEl: '.swiper-button-next, .disclaimer__navigation-bot',
 		prevEl: '.swiper-button-prev',
 	},
 	on: {
 		slideChange: function () {
 			const currentSlide = this.slides[this.activeIndex];
 			currentSlide.scrollTop = 0;
-		}
+		},
+		init: function () {
+			// Enable vertical scrolling for slides
+			this.slides.forEach(function (slide) {
+				slide.style.setProperty('overflow-y', 'scroll');
+			});
+		},
 	},
 });
 

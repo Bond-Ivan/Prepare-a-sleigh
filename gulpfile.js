@@ -118,11 +118,10 @@ watch(['src/images/**/*.jpg',
 	'src/images/**/*.svg',
 	'src/images/**/*.jpeg'], imagesPrep);
 watch('src/js/**/*.js', scriptsDev);
-watch('src/styles/components/**/*.scss', scssCompileDev);
+watch('src/styles/**/*.scss', scssCompileDev);
 
 const dev = series(clean, htmlMinifyDev, scssCompileDev, scriptsDev, svgSprites, imagesPrep, otherFiles, watchFiles);
 exports.dev = dev;
 
 const build = series(clean, htmlMinifyBuild, scssCompileBuild, scriptsBuild, svgSprites, imagesPrep, otherFiles,);
 exports.build = build;
-
