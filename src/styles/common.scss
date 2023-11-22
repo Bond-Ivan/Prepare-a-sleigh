@@ -131,8 +131,8 @@ body {
 @font-face {
 	font-family: 'TT Commons';
 	src: local('TT Commons Light'), local('TT Commons-Light'),
-		url('../fonts/TTCommons-Light.woff2') format('woff2'),
-		url('../fonts/TTCommons-Light.woff') format('woff');
+		url('fonts/TTCommons-Light.woff2') format('woff2'),
+		url('fonts/TTCommons-Light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
@@ -141,8 +141,8 @@ body {
 @font-face {
 	font-family: 'TT Commons';
 	src: local('TT Commons Regular'), local('TT Commons-Regular'),
-		url('../fonts/TTCommons-Regular.woff2') format('woff2'),
-		url('../fonts/TTCommons-Regular.woff') format('woff');
+		url('fonts/TTCommons-Regular.woff2') format('woff2'),
+		url('fonts/TTCommons-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -151,8 +151,8 @@ body {
 @font-face {
 	font-family: 'TT Commons';
 	src: local('TT Commons Medium'), local('TT Commons-Medium'),
-		url('../fonts/TTCommons-Medium.woff2') format('woff2'),
-		url('../fonts/TTCommons-Medium.woff') format('woff');
+		url('fonts/TTCommons-Medium.woff2') format('woff2'),
+		url('fonts/TTCommons-Medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -161,8 +161,8 @@ body {
 @font-face {
 	font-family: 'TT Commons';
 	src: local('TT Commons Bold'), local('TT Commons-Bold'),
-		url('../fonts/TTCommons-Bold.woff2') format('woff2'),
-		url('../fonts/TTCommons-Bold.woff') format('woff');
+		url('fonts/TTCommons-Bold.woff2') format('woff2'),
+		url('fonts/TTCommons-Bold.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
